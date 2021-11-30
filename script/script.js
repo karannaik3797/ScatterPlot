@@ -22,7 +22,7 @@ var filename = "location1";
 	.text(function (d) { return d; });
 
     var day = "day1";
-    var days = ["day1","day2","day3","day4","day5",'day6'];
+    var days = ["day1","day2","day3","day4","day5"];
 
     var label2 = d3.select('body').style('background-color',"white")
     .append('text')
@@ -68,7 +68,8 @@ var filename = "location1";
   function onchange() {
     filename = d3.select('#select1').property('value');
     day = d3.select('#select2').property('value');
-    utility = d3.select('#select3').property('value'); 
+    utility = d3.select('#select3').property('value');
+    console.log(utility)
     d3.selectAll("svg").remove(); 
     drawscatterplot(filename, day, utility);
   };
@@ -77,7 +78,7 @@ var filename = "location1";
   function drawscatterplot(filename,day, utility){
       const xValue = d => d.time;
       const xLabel = 'Time';
-      const yValue = d => d.power;
+      const yValue = d => d[utility];
       const yLabel = 'Damage Reported';
       const margin = {top: 30, right: -10, bottom: 30, left:200};
       var svg = d3.select("body").append("svg").attr('width','1480px').attr('height','1500px')
