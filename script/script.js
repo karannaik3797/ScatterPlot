@@ -43,7 +43,7 @@ var filename = "location1";
 	.append('option')
 	.text(function (d) { return d; });
 
-    var ut = "power";
+    var utility = "power";
     var utilities = ["power","sewer_and_water","medical","roads_and_bridges","buildings"];
 
     var label3 = d3.select('body').style('background-color',"white")
