@@ -1,0 +1,24 @@
+body {
+    margin: 3px;
+    
+}
+div{
+    background-color:aquamarine;
+}
+.domain {
+    display: none;
+}
+.tick line {
+    stroke: #C0C0BB;
+}
+.tick text {
+    fill: black;
+    font-size: 8pt;
+    font-family: sans-serif;
+}
+.axis-label {
+    fill: black;
+    font-size: 15pt;
+    font-family: sans-serif;
+}
+    
